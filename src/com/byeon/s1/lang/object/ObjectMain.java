@@ -12,7 +12,9 @@ public class ObjectMain {
 		os1.study1();
 		
 		Car car = new Car();
-	
+		System.out.println("Car : " + car);
+		System.out.println(car.toString());
+		
 		Object obj = car;
 		
 		FireCar fc = new FireCar();
