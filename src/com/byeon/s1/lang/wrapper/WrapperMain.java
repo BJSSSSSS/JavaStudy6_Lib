@@ -8,7 +8,7 @@ public class WrapperMain {
 		
 		WrapperEx1 wrapperEx1 = new WrapperEx1();
 		
-		//wrapperEx1.ex1();
+		wrapperEx1.ex1();
 		wrapperEx1.ex2();
 		
 		

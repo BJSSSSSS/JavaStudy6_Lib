@@ -59,13 +59,13 @@ public class WrapperEx1 {
 				if(check >= 10 && check <=100) {
 					check = check%10;
 					if(check == Integer.parseInt(result3)) {
-						System.out.println("올바른 주민번호 입력!");
+						System.out.println("주민번호가 확인되었습니다.");
 					}else {
 						System.out.println("조작된 주민번호 입니다.");
 					}
 				}else if(check >= 0 && check <=9) {
 					if(check == Integer.parseInt(result3)) {
-						System.out.println("올바른 주민번호 입력!");
+						System.out.println("주민번호가 확인되었습니다.");
 					}else {
 						System.out.println("조작된 주민번호 입니다.");
 					}
