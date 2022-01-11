@@ -9,10 +9,10 @@ public class MemberData {
 	//기본 생성자 선언
 	public MemberData() {
 		
-		this.data = "id1 - pw1 - name1 - id1@gmail.com -";
-		this.data = this.data+"id2 - pw2 - name2 - name2@naver.com -";
-		this.data = this.data+"id3 - pw3 - name3 - name3@daum.net -";
-		this.data = this.data+"id4 - pw4 - name4 - name4@daum.net";
+		this.data = "id1 - pw1 - name1 - id1@gmail.com -20-";
+		this.data = this.data+"id2 - pw2 - name2 - name2@naver.com -42-";
+		this.data = this.data+"id3 - pw3 - name3 - name3@daum.net -36-";
+		this.data = this.data+"id4 - pw4 - name4 - name4@daum.net-17-";
 		//System.out.println(this.data);
 		
 	}
@@ -23,7 +23,7 @@ public class MemberData {
 		
 		//this.data
 		String [] datas = this.data.split("-");
-		MemberDTO [] memberDTOs = new MemberDTO[datas.length/4];
+		MemberDTO [] memberDTOs = new MemberDTO[datas.length/5];
 		
 		int index = 0;
 		
@@ -32,10 +32,11 @@ public class MemberData {
 			
 			MemberDTO memberDTO = new MemberDTO();
 			
-			memberDTO.setId(datas[index].trim());			//datas[0] [4] [8]
-			memberDTO.setPw(datas[++index].trim());		//datas[1] [5] [9]
-			memberDTO.setName(datas[++index].trim());		//datas[2] [6] [10]
-			memberDTO.setEmail(datas[++index].trim());		//datas[3] [7] [11]
+			memberDTO.setId(datas[index].trim());						//datas[0] [5] [10]
+			memberDTO.setPw(datas[++index].trim());						//datas[1] [6] [11]
+			memberDTO.setName(datas[++index].trim());					//datas[2] [7] [12]
+			memberDTO.setEmail(datas[++index].trim());					//datas[3] [8] [13]
+			memberDTO.setAge(Integer.parseInt(datas[++index].trim()));	//datas[4] [9] [14]
 			memberDTOs[i] = memberDTO;
 			index++;
 		}

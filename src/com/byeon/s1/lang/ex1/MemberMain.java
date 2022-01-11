@@ -10,11 +10,11 @@ public class MemberMain {
 		// i ++ 후행  :  나 자신(i)을 젤 나중에 실행(++)
 		// 단독으로 사용할 떄는 차이가 없음
 		//
-		int num = 0;
-		++num; //num=1
-		num++; //num=2
+		//int num = 0;
+		//++num; //num=1
+		//num++; //num=2
 		
-		System.out.println(num++);
+		//System.out.println(num++);
 		
 		//test, 프로그램 실행
 		
@@ -23,14 +23,15 @@ public class MemberMain {
 		MemberDTO [] members = memberData.init();
 		
 		for(int i=0; i<members.length; i++) {
-			System.out.println(members[i].getId());
-			System.out.println(members[i].getPw());
-			System.out.println(members[i].getName());
-			System.out.println(members[i].getEmail());
+			System.out.println("ID : " + members[i].getId());
+			System.out.println("PW : " + members[i].getPw());
+			System.out.println("Name : " + members[i].getName());
+			System.out.println("Email : " + members[i].getEmail());
+			System.out.println("Age : " + members[i].getAge());
 			System.out.println("======================");
 		}
 		
-		System.out.println("name : " + "iu " + "age : " + 30);
+		//System.out.println("name : " + "iu " + "age : " + 30);
 		
 
 		
