@@ -55,8 +55,6 @@ public class StringStudy1 {
 	}
 	
 	
-	
-
 	public void subStringEx1() {
 		//키보드로부터 업로드할 파일명을 입력
 		//a.txt, b.pdf, iu.jpg
