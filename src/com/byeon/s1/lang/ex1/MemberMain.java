@@ -29,7 +29,25 @@ public class MemberMain {
 			System.out.println(members[i].getEmail());
 			System.out.println("======================");
 		}
+		
+		System.out.println("name : " + "iu " + "age : " + 30);
+		
+
+		
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
