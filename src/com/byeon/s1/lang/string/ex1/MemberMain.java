@@ -1,6 +1,6 @@
 
 
-package com.byeon.s1.lang.ex1;
+package com.byeon.s1.lang.string.ex1;
 
 public class MemberMain {
 
