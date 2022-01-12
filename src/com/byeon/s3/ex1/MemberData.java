@@ -3,11 +3,17 @@
 package com.byeon.s3.ex1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class MemberData {
 
 	private String data;
+	
+	//private Scanner sc;
+	
+	
+	
 	
 	//기본 생성자 선언
 	public MemberData() {
@@ -20,6 +26,32 @@ public class MemberData {
 		
 	}
 
+	public void addMember(ArrayList<MemberDTO> ar) {
+		//새로추가할 MemberDTO 생성
+		//키보드로부터 id, pw, name, email, age 입력받아서
+		//MemberDTO의 멤버변수값으로 대입
+		//매개변수로 받은 ar에 추가
+		
+		Scanner sc = new Scanner(System.in);
+		MemberDTO memberDTO = new MemberDTO();
+		
+		System.out.println("아이디를 입력하시오 : ");
+		memberDTO.setId(sc.next());
+		System.out.println("비밀번호를 입력하시오 : ");
+		memberDTO.setPw(sc.next());
+		System.out.println("이름을 입력하시오 : ");
+		memberDTO.setName(sc.next());
+		System.out.println("이메일을 입력하시오 : ");
+		memberDTO.setEmail(sc.next());
+		System.out.println("나이를를 입력하시오 : ");
+		memberDTO.setAge(sc.nextInt());
+
+		ar.add(memberDTO);
+		
+	}
+	
+	
+	
 	public ArrayList<MemberDTO> init(){ 
 		//data에 있는 문자열을 StringTokenizer로 파싱해서
 		//MemberDTO를 생성해서 멤버변수값으로 대입
@@ -33,30 +65,19 @@ public class MemberData {
 			
 			MemberDTO memberDTO = new MemberDTO();
 			
-			String token = st.nextToken().trim(); 
-			memberDTO.setId(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setPw(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setName(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setEmail(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setAge(Integer.parseInt(token));
+			memberDTO.setId(st.nextToken().trim());
+			memberDTO.setPw(st.nextToken().trim());
+			memberDTO.setName(st.nextToken().trim());
+			memberDTO.setEmail(st.nextToken().trim());
+			memberDTO.setAge(Integer.parseInt(st.nextToken().trim()));
 			
 			ar.add(memberDTO);
 			
 		}
 		
-		return ar;
-				
+		return ar;	
+		
 	}
-	
-	
 	
 }
 
