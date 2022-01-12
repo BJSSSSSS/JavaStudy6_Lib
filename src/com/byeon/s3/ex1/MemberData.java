@@ -35,14 +35,10 @@ public class MemberData {
 		
 		for(int i=0; i<ar.size(); i++) {
 			if(id.equals(ar.get(i).getId())) {
-				System.out.println("해당 아이디가 삭제되었습니다.");
 				memberDTO = ar.remove(i);
-				check = false;
 			}
 		}
-		if(check) {
-			System.out.println("삭제할 아이디가 없습니다.");
-		}
+
 		return memberDTO;
 	}
 	
