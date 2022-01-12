@@ -3,15 +3,18 @@
 package com.byeon.s3.ex1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class MemberData {
 
 	private String data;
+	private Scanner sc;
 	
 	//기본 생성자 선언
 	public MemberData() {
 		
+		this.sc = new Scanner(System.in);
 		this.data = "id1 - pw1 - name1 - id1@gmail.com -20-";
 		this.data = this.data+"id2 - pw2 - name2 - name2@naver.com -42-";
 		this.data = this.data+"id3 - pw3 - name3 - name3@daum.net -36-";
@@ -20,8 +23,26 @@ public class MemberData {
 		
 	}
 	
-	public void array(ArrayList<MemberDTO> ar) {
+	public void addMember(ArrayList<MemberDTO> ar) {
+		//새로추가할 MemberDTO 생성
+		//키보드로부터 id, pw, name, email, age 입력받아서
+		//MemberDTO의 멤버변수 값으로 대입
+		//매개변수로 받은 ar에 MemberDTO 추가
 		
+		MemberDTO memberDTO = new MemberDTO();
+		
+		System.out.println("아이디는? ");
+		memberDTO.setId(sc.next());
+		System.out.println("비밀번호는? ");
+		memberDTO.setPw(sc.next());
+		System.out.println("이름은? ");
+		memberDTO.setName(sc.next());
+		System.out.println("이메일은? ");
+		memberDTO.setEmail(sc.next());
+		System.out.println("나이는? ");
+		memberDTO.setAge(sc.nextInt());		
+		
+		ar.add(memberDTO);
 		
 	}
 	
@@ -34,7 +55,7 @@ public class MemberData {
 		//MemberDTO를 생성해서 멤버변수값으로 대입
 		//MemberDTO들을 ArrayList에 담아서 리턴
 		
-		System.out.println("MemberEx1 Branch");
+		//System.out.println("MemberEx1 Branch");
 		
 		StringTokenizer st = new StringTokenizer(this.data, "-");
 		ArrayList<MemberDTO> ar = new ArrayList<>();

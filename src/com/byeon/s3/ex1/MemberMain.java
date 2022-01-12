@@ -12,10 +12,8 @@ public class MemberMain {
 
 		ArrayList<MemberDTO> members = memberData.init();
 		
-		memberData.array(members);
-		
-		
-		
+		memberData.addMember(members);
+
 		for(int i=0; i<members.size(); i++) {
 			System.out.println("ID : " + members.get(i).getId());
 			System.out.println("PW : " + members.get(i).getPw());
