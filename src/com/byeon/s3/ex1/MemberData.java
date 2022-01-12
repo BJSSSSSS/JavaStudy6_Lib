@@ -23,6 +23,28 @@ public class MemberData {
 		
 	}
 	
+	
+	public MemberDTO removeMember(ArrayList<MemberDTO> ar){//ar안에 멤버들이있다!
+		//삭제하고 싶은 ID 입력받아서
+		//ArrayList에서 삭제
+		
+		MemberDTO memberDTO = null;
+		System.out.println("삭제 할 아이디를 입력하시오 : ");
+		String id = sc.next();
+		
+		for(int i=0; i<ar.size(); i++) {
+			if(id.equals(ar.get(i).getId())) {
+				System.out.println("해당 아이디가 삭제되었습니다.");
+				memberDTO = ar.remove(i); 
+				break;
+			}
+		}
+
+		return memberDTO; // 삭제할 애를 빼서 리턴해준것임!
+						  // 만약 못찾았으면 null이 리턴된다
+	}
+	
+	
 	public void addMember(ArrayList<MemberDTO> ar) {
 		//새로추가할 MemberDTO 생성
 		//키보드로부터 id, pw, name, email, age 입력받아서
