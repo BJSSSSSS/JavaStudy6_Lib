@@ -5,8 +5,6 @@ package com.byeon.s3.ex1;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-import com.byeon.s2.util.token.SeasonDTO;
-
 public class MemberData {
 
 	private String data;
