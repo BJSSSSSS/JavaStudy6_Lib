@@ -13,6 +13,9 @@ public class MemberMain {
 		
 		memberData.addMember(members);
 		
+		memberData.removeMember(members);
+		
+		
 		
 		for(int i=0; i<members.size(); i++) {
 			System.out.println("ID : " + members.get(i).getId());

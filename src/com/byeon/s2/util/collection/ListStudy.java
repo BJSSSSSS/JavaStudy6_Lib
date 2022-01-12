@@ -79,7 +79,7 @@ public class ListStudy {
 		ar.add(3);//2
 		ar.add(1, 100);//1번자리에 껴넣음
 		ar.set(0, 2000);//0인덱스의 1을 2000으로 수정
-		ar.remove(0);//0인덱스의 1을 2000으로 수정
+		ar.remove(0);//0인덱스를 삭제
 		ar.clear();
 		
 		System.out.println(numbers[0]);

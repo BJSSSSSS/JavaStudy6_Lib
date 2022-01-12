@@ -10,14 +10,12 @@ public class MemberData {
 
 	private String data;
 	
-	//private Scanner sc;
-	
-	
-	
+	private Scanner sc;
+
 	
 	//기본 생성자 선언
 	public MemberData() {
-		
+		sc = new Scanner(System.in);
 		this.data = "id1 - pw1 - name1 - id1@gmail.com -20-";
 		this.data = this.data+"id2 - pw2 - name2 - name2@naver.com -42-";
 		this.data = this.data+"id3 - pw3 - name3 - name3@daum.net -36-";
@@ -25,6 +23,30 @@ public class MemberData {
 		//System.out.println(this.data);
 		
 	}
+	
+	public MemberDTO removeMember(ArrayList<MemberDTO> ar){//ar안에 멤버들이있다!
+		//삭제하고 싶은 ID 입력받아서
+		//ArrayList에서 삭제
+		
+		MemberDTO memberDTO = null;
+		System.out.println("삭제 할 아이디를 입력하시오 : ");
+		String id = sc.next();
+		boolean check = true;
+		
+		for(int i=0; i<ar.size(); i++) {
+			if(id.equals(ar.get(i).getId())) {
+				System.out.println("해당 아이디가 삭제되었습니다.");
+				memberDTO = ar.remove(i);
+				check = false;
+			}
+		}
+		if(check) {
+			System.out.println("삭제할 아이디가 없습니다.");
+		}
+		return memberDTO;
+	}
+	
+	
 
 	public void addMember(ArrayList<MemberDTO> ar) {
 		//새로추가할 MemberDTO 생성
@@ -35,19 +57,30 @@ public class MemberData {
 		Scanner sc = new Scanner(System.in);
 		MemberDTO memberDTO = new MemberDTO();
 		
-		System.out.println("아이디를 입력하시오 : ");
+		System.out.println("신규 아이디를 입력하시오 : ");
 		memberDTO.setId(sc.next());
-		System.out.println("비밀번호를 입력하시오 : ");
+		System.out.println("신규 비밀번호를 입력하시오 : ");
 		memberDTO.setPw(sc.next());
-		System.out.println("이름을 입력하시오 : ");
+		System.out.println("신규 이름을 입력하시오 : ");
 		memberDTO.setName(sc.next());
-		System.out.println("이메일을 입력하시오 : ");
+		System.out.println("신규 이메일을 입력하시오 : ");
 		memberDTO.setEmail(sc.next());
-		System.out.println("나이를를 입력하시오 : ");
+		System.out.println("신규 나이를 입력하시오 : ");
 		memberDTO.setAge(sc.nextInt());
-
+		System.out.println();
+		
 		ar.add(memberDTO);
 		
+//		String data = "iu-iu-iu-email-30"; //만약 한번에 입력했다면 이렇게!
+//		MemberDTO mem2 = new MemberDTO();
+//		String [] d = data.split("-");
+//		mem2.setId(d[0]);
+//		mem2.setPw(d[1]);
+//		mem2.setName(d[2]);
+//		mem2.setEmail(d[3]);
+//		mem2.setAge(Integer.parseInt(d[4]));
+//		ar.add(mem2);
+//		
 	}
 	
 	
