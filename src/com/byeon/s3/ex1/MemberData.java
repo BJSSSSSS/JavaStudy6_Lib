@@ -25,34 +25,9 @@ public class MemberData {
 		//MemberDTO를 생성해서 멤버변수값으로 대입
 		//MemberDTO들을 ArrayList에 담아서 리턴
 		
-		StringTokenizer st = new StringTokenizer(data, "-");
+		System.out.println("MemberEx1 Branch");
 		
-		ArrayList<MemberDTO> ar = new ArrayList<>();
-		
-		while(st.hasMoreTokens()) {//token이 더 있는지를 물어보고 있으면 true 없으면 false!
-			
-			MemberDTO memberDTO = new MemberDTO();
-			
-			String token = st.nextToken().trim(); 
-			memberDTO.setId(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setPw(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setName(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setEmail(token);
-			
-			token = st.nextToken().trim();
-			memberDTO.setAge(Integer.parseInt(token));
-			
-			ar.add(memberDTO);
-			
-		}
-		
-		return ar;
+		return null;
 				
 	}
 	
