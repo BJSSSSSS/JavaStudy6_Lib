@@ -19,6 +19,15 @@ public class MemberData {
 		//System.out.println(this.data);
 		
 	}
+	
+	public void array(ArrayList<MemberDTO> ar) {
+		
+		
+	}
+	
+	
+	
+	
 
 	public ArrayList<MemberDTO> init(){ 
 		//data에 있는 문자열을 StringTokenizer로 파싱해서
