@@ -27,13 +27,27 @@ public class MemberData {
 		
 		System.out.println("MemberEx1 Branch");
 		
-		return null;
-				
+		StringTokenizer st = new StringTokenizer(this.data, "-");
+		ArrayList<MemberDTO> ar = new ArrayList<>();
+		
+		while(st.hasMoreTokens()) {
+			
+			MemberDTO memberDTO = new MemberDTO();
+			
+			memberDTO.setId(st.nextToken().trim());
+			memberDTO.setPw(st.nextToken().trim());
+			memberDTO.setName(st.nextToken().trim());
+			memberDTO.setEmail(st.nextToken().trim());
+			memberDTO.setAge(Integer.parseInt(st.nextToken().trim()));
+			
+			ar.add(memberDTO);
+		}
+		return ar;		
 	}
-	
-	
-	
+
 }
+
+
 
 
 
