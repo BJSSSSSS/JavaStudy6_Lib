@@ -3,10 +3,36 @@
 package com.byeon.s2.util.collection;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ListStudy {
 	
 	private final int NUM=1;
+	
+	public List<String> study5() { // 부모타입으로 리턴을 줘버리면
+									// 메인에서 호출시 메인에서 쓰고싶은대로 쓰면 된다!
+		
+		LinkedList<String> list = new LinkedList<>();
+		list.add("1");
+		
+		return list;
+		
+	}
+	
+	
+	public void study4() {
+		
+		LinkedList<Integer> list = new LinkedList<>();
+		list.add(1);
+		list.add(2);
+		
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		
+		
+	}
+	
 	
 	public void study3() {
 		//123

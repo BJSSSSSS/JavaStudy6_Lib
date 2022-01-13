@@ -1,6 +1,6 @@
 
 
-package com.byeon.s3.ex1;
+package com.byeon.s3.ex1.member;
 
 import java.util.ArrayList;
 import java.util.Scanner;
